@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
   # index以外にも除外するアクションがあれば後で追記（意図的にコメントしています）
 
   def index
-    
   end
 
   def new
@@ -22,7 +21,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :description, :category_id, :condition_id, :shipping_cost_id,:shipping_place_id, :shipping_day_id, :price, :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :description, :category_id, :condition_id, :shipping_cost_id, :shipping_place_id,
+                                 :shipping_day_id, :price, :image).merge(user_id: current_user.id)
   end
-
 end

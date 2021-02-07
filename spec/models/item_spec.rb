@@ -62,33 +62,33 @@ RSpec.describe Item, type: :model do
     end
 
     it 'categoryについて、ActiveHashの中身が一行目の時は登録できない' do
-      @item.category_id = 1 
+      @item.category_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Category must be other than 1")
+      expect(@item.errors.full_messages).to include('Category must be other than 1')
     end
 
     it 'conditionについて、ActiveHashの中身が一行目の時は登録できない' do
       @item.condition_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Condition must be other than 1")
+      expect(@item.errors.full_messages).to include('Condition must be other than 1')
     end
 
     it 'shipping_costについて、ActiveHashの中身が一行目の時は登録できない' do
       @item.shipping_cost_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Shipping cost must be other than 1")
+      expect(@item.errors.full_messages).to include('Shipping cost must be other than 1')
     end
 
     it 'shipping_placeについて、ActiveHashの中身が一行目の時は登録できない' do
       @item.shipping_place_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Shipping place must be other than 1")
+      expect(@item.errors.full_messages).to include('Shipping place must be other than 1')
     end
 
     it 'shipping_dayについて、ActiveHashの中身が一行目の時は登録できない' do
       @item.shipping_day_id = 1
       @item.valid?
-      expect(@item.errors.full_messages).to include("Shipping day must be other than 1")
+      expect(@item.errors.full_messages).to include('Shipping day must be other than 1')
     end
   end
 end
