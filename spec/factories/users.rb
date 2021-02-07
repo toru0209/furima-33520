@@ -9,5 +9,6 @@ FactoryBot.define do
     last_name_kana        { 'タナカ' }
     first_name_kana       { 'タロウ' }
     birthday              { '1932-04-02' }
+
   end
 end
