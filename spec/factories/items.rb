@@ -2,12 +2,12 @@ FactoryBot.define do
   factory :item do
     name { 'サンプル商品' }
     description { 'サンプルの詳細' }
-    category_id { 'カテゴリーの内容' }
-    condition_id { '状態について' }
-    shipping_cost_id { '発送の負担' }
-    shipping_place_id { '発送場所' }
-    shipping_day_id { '発送にかかる日数' }
-    price { '金額' }
+    category_id { 2 }
+    condition_id { 2 }
+    shipping_cost_id { 2 }
+    shipping_place_id { 2 }
+    shipping_day_id { 2 }
+    price { 500 }
     association :user
 
     after(:build) do |item|
