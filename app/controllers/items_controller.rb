@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
-  # index以外にも除外するアクションがあれば後で追記（意図的にコメントしています）
+  before_action :authenticate_user!, except: [:index, :show]
+  # index,show以外にも除外するアクションがあれば後で追記（意図的にコメントしています）
 
   def index
     @items = Item.all.order('created_at DESC')
@@ -17,6 +17,10 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @item = Item.find(params[:id])
   end
 
   private
