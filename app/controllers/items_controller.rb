@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   # index以外にも除外するアクションがあれば後で追記（意図的にコメントしています）
 
   def index
+    @items = Item.all.order('created_at DESC')
   end
 
   def new
